@@ -10,7 +10,6 @@
     box-sizing: border-box;
 }
 
-/* ===== Y2K NAVBAR ===== */
 .y2k-navbar {
     position: fixed;
     top: 0;
@@ -27,16 +26,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
+/* LOGO MAIS PRA ESQUERDA E MAIOR */
 .navbar-logo {
     flex-shrink: 0;
+    margin-left: -270px; /* empurra mais pra esquerda */
 }
 
 .logo-image {
-    width: 100px;
-    height: 100px;
+    width: 360px;  /* aumentei o tamanho */
+    height: 130px;
     object-fit: contain;
     border: none;
     border-radius: 0;
@@ -44,12 +44,13 @@
     background: transparent;
 }
 
+/* LINKS MAIS PRA DIREITA */
 .navbar-links {
     display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
+    gap: 25px;
     align-items: center;
     margin-left: auto;
+    margin-right: 80px; /* empurra levemente pra direita */
 }
 
 .nav-link {
@@ -67,63 +68,95 @@
 }
 
 .nav-link:hover {
-    background: linear-gradient(180deg, var(--pink-neon) 0%, var(--purple-digital) 100%);
-    border-color: var(--pink-neon);
+    background: linear-gradient(180deg, var(--magenta) 0%, var(--black) 100%);
+    border-color: var(--magenta);
     transform: scale(1.1);
-    box-shadow: 0 0 20px var(--pink-neon);
+    box-shadow: 0 0 20px var(--magenta);
     text-shadow: none;
 }
-
 .navbar-search {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
     margin-left: auto;
+
+    margin-right: -120px; /* <-- empurra mais pra direita */
+
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 0 20px rgba(255, 186, 206, 0.15),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
+/* INPUT MAIS FUTURISTA */
 .search-input {
     font-family: 'VT323', monospace;
-    font-size: 14px;
-    padding: 8px 12px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    padding: 10px 14px;
+    width: 190px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.25);
     color: #fff;
-    width: 180px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.search-input:focus {
     outline: none;
-    border-color: var(--pink-neon);
-    box-shadow: 0 0 20px var(--pink-neon);
-    background: rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
 }
 
+/* PLACEHOLDER */
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+/* FOCUS MAIS Y2K */
+.search-input:focus {
+    border-color: var(--magenta);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 0 12px var(--magenta),
+        0 0 30px rgba(255, 186, 206, 0.3);
+    transform: scale(1.03);
+}
+
+/* BOTÃO MAIS "ARCADE 2000" */
 .search-button {
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
-    padding: 12px 16px;
-    background: linear-gradient(180deg, var(--pink-neon) 0%, var(--purple-digital) 100%);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    font-size: 11px;
+    padding: 12px 14px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 186, 206, 0.5);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: linear-gradient(
+        180deg,
+        var(--magenta),
+        #000
+    );
+    box-shadow: 
+        0 0 15px rgba(255, 186, 206, 0.4),
+        inset 0 0 8px rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease;
+    letter-spacing: 1px;
 }
 
+/* HOVER COM GLOW FORTE */
 .search-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px var(--pink-neon);
+    transform: translateY(-2px) scale(1.08);
+    box-shadow: 
+        0 0 25px var(--magenta),
+        0 0 40px rgba(255, 186, 206, 0.3);
 }
 
+/* CLICK FEEL REAL */
 .search-button:active {
     transform: scale(0.95);
+    box-shadow: 0 0 10px var(--magenta);
 }
 
 .hamburger-btn {
@@ -141,7 +174,7 @@
 
 .hamburger-btn:hover {
     background: rgba(255, 255, 255, 0.2);
-    border-color: var(--pink-neon);
+    border-color: var(--magenta);
 }
 
 .hamburger-btn span {
@@ -207,16 +240,18 @@
 }
 
 :root {
-    --pink-neon: #FFBACE;
-    --blue-electric: #00D4FF;
-    --purple-digital: #9B59B6;
+    --magenta: #FF007f;
+    --purple: #9B59B6;
+    --white: #ffffff;
+    --green-neon: #00ff00;
+    --black: #000000;
     --chrome-silver: #C0C0C0;
     --chrome-dark: #808080;
     --chrome-light: #E8E8E8;
-    --holographic-rainbow: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD, #98D8C8);
-    --neon-glow: 0 0 10px var(--pink-neon), 0 0 20px var(--pink-neon), 0 0 30px var(--pink-neon);
+    --holographic-rainbow: linear-gradient(45deg, #FF007f, #ffffff, #00ff00, #000000, #FF007f);
+    --neon-glow: 0 0 10px var(--magenta), 0 0 20px var(--magenta), 0 0 30px var(--magenta);
     --chrome-gradient: linear-gradient(180deg, #E8E8E8 0%, #C0C0C0 50%, #808080 100%);
-    --y2k-gradient: linear-gradient(135deg, #FFBACE 0%, #00D4FF 50%, #9B59B6 100%);
+    --y2k-gradient: linear-gradient(135deg, #FF007f 0%, #ffffff 50%, #00ff00 100%);
 }
 
 html {
@@ -225,7 +260,7 @@ html {
 
 body {
     font-family: 'Comic Neue', 'VT323', cursive;
-    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
     color: #fff;
     overflow-x: hidden;
 }
@@ -262,7 +297,7 @@ body {
 .loading-text {
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
-    color: var(--pink-neon);
+    color: var(--magenta);
     margin-bottom: 20px;
     animation: blink 1s infinite;
 }
@@ -288,7 +323,7 @@ body {
 .loading-status {
     font-family: 'VT323', monospace;
     font-size: 18px;
-    color: var(--pink-neon);
+    color: var(--magenta);
 }
 
 @keyframes blink {
@@ -331,7 +366,7 @@ body {
     font-size: 24px;
     animation: float 6s ease-in-out infinite;
     opacity: 0.6;
-    text-shadow: 0 0 10px var(--pink-neon);
+    text-shadow: 0 0 10px var(--magenta);
 }
 
 .float-item.folder { top: 10%; left: 5%; animation-delay: 0s; }
@@ -358,22 +393,32 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse; /* <-- aqui inverte (imagem vai pra esquerda) */
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 60px 20px;
     position: relative;
 }
 
+.hero-content {
+    z-index: 10;
+    position: relative;
+    margin-top: 0; 
+    max-width: 500px;
+}
+
 .hero-image-container {
-    margin-bottom: 20px;
-    z-index: 3;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
 }
 
 .hero-image {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
     animation: heroImageFloat 3s ease-in-out infinite;
 }
@@ -383,18 +428,14 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-.hero-content {
-    z-index: 2;
-}
-
 .hero-title {
     font-family: 'Press Start 2P', cursive;
     font-size: clamp(24px, 6vw, 48px);
     margin-bottom: 20px;
     text-shadow: 
-        3px 3px 0 #FF6B6B,
-        6px 6px 0 #4ECDC4,
-        9px 9px 0 #45B7D1,
+        3px 3px 0 var(--purple),
+        6px 6px 0 var(--magenta),
+        9px 9px 0 var(--purple),
         12px 12px 20px rgba(0, 0, 0, 0.5);
     animation: titleFloat 3s ease-in-out infinite;
 }
@@ -405,11 +446,9 @@ body {
 }
 
 .title-line.chrome {
-    background: var(--chrome-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    filter: drop-shadow(0 0 10px rgba(192, 192, 192, 0.8));
+    color: var(--magenta);
+    -webkit-text-stroke: 2px var(--white);
+    text-shadow: 0 0 10px var(--magenta);
 }
 
 @keyframes titleFloat {
@@ -420,20 +459,20 @@ body {
 .hero-subtitle {
     font-family: 'VT323', monospace;
     font-size: clamp(20px, 4vw, 32px);
-    color: var(--pink-neon);
+    color: var(--white);
     margin-bottom: 30px;
-    text-shadow: 0 0 10px var(--pink-neon);
+    text-shadow: 0 0 10px var(--magenta);
     animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 10px var(--pink-neon), 0 0 20px var(--pink-neon); }
-    to { text-shadow: 0 0 20px var(--pink-neon), 0 0 40px var(--pink-neon), 0 0 60px var(--pink-neon); }
+    from { text-shadow: 0 0 10px var(--magenta), 0 0 20px var(--magenta); }
+    to { text-shadow: 0 0 20px var(--magenta), 0 0 40px var(--magenta), 0 0 60px var(--magenta); }
 }
 
 .hero-decoration {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* <-- joga para a esquerda */
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -441,7 +480,7 @@ body {
 .sparkle {
     font-size: 24px;
     animation: sparkle 1.5s ease-in-out infinite;
-    color: var(--pink-neon);
+    color: var(--chrome-light);
 }
 
 .sparkle:nth-child(2) { animation-delay: 0.3s; }
@@ -459,7 +498,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
     color: #fff;
-    background: var(--y2k-gradient);
+    background: var(--purple);
     border: 3px solid var(--chrome-silver);
     border-radius: 10px;
     text-decoration: none;
@@ -486,7 +525,7 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.5);
 }
 
 .button-glow {
@@ -512,8 +551,8 @@ body {
     font-size: clamp(18px, 4vw, 28px);
     text-align: center;
     margin: 60px 0 40px;
-    color: var(--pink-neon);
-    text-shadow: 0 0 10px var(--pink-neon);
+    color: var(--magenta);
+    text-shadow: 0 0 10px var(--magenta);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -762,7 +801,7 @@ body {
 .project-folder:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
-    border-color: var(--blue-electric);
+    border-color: var(--green-neon);
 }
 
 .folder-icon {
@@ -802,8 +841,8 @@ body {
 }
 
 .project-file:hover {
-    background: var(--blue-electric);
-    border-color: var(--blue-electric);
+    background: var(--green-neon);
+    border-color: var(--green-neon);
 }
 
 .project-file:hover .file-name {
@@ -873,7 +912,7 @@ body {
 .skill-percent {
     font-family: 'VT323', monospace;
     font-size: 20px;
-    color: var(--purple-digital);
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -894,8 +933,8 @@ body {
 }
 
 @keyframes progressGlow {
-    from { box-shadow: 0 0 5px var(--pink-neon); }
-    to { box-shadow: 0 0 15px var(--pink-neon), 0 0 25px var(--blue-electric); }
+    from { box-shadow: 0 0 5px var(--magenta); }
+    to { box-shadow: 0 0 15px var(--magenta), 0 0 25px var(--green-neon); }
 }
 
 /* ===== EXPERIENCE SECTION ===== */
@@ -934,12 +973,12 @@ body {
 .timeline-date {
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
-    color: var(--pink-neon);
+    color: var(--magenta);
     background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
     padding: 10px 20px;
-    border: 3px solid var(--pink-neon);
+    border: 3px solid var(--magenta);
     border-radius: 10px;
-    text-shadow: 0 0 10px var(--pink-neon);
+    text-shadow: 0 0 10px var(--magenta);
     white-space: nowrap;
     box-shadow: 0 0 20px rgba(255, 186, 206, 0.3);
 }
@@ -1178,14 +1217,14 @@ body {
 }
 
 .tool-btn:hover {
-    background: linear-gradient(180deg, var(--pink-neon) 0%, var(--purple-digital) 100%);
+    background: linear-gradient(180deg, var(--magenta) 0%, var(--black) 100%);
     transform: scale(1.1);
 }
 
 .tool-btn.active {
-    background: linear-gradient(180deg, var(--pink-neon) 0%, var(--purple-digital) 100%);
-    border-color: var(--pink-neon);
-    box-shadow: 0 0 10px var(--pink-neon);
+    background: linear-gradient(180deg, var(--magenta) 0%, var(--black) 100%);
+    border-color: var(--magenta);
+    box-shadow: 0 0 10px var(--magenta);
 }
 
 .color-btn {
@@ -1199,12 +1238,12 @@ body {
 
 .color-btn:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 10px var(--pink-neon);
+    box-shadow: 0 0 10px var(--magenta);
 }
 
 .color-btn.active {
-    border-color: var(--pink-neon);
-    box-shadow: 0 0 15px var(--pink-neon);
+    border-color: var(--magenta);
+    box-shadow: 0 0 15px var(--magenta);
     transform: scale(1.2);
 }
 
@@ -1230,7 +1269,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     padding: 8px 12px;
-    background: linear-gradient(180deg, var(--pink-neon) 0%, var(--purple-digital) 100%);
+    background: linear-gradient(180deg, var(--magenta) 0%, var(--black) 100%);
     border: 2px solid #606060;
     border-radius: 5px;
     cursor: pointer;
@@ -1240,7 +1279,7 @@ body {
 
 .action-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px var(--pink-neon);
+    box-shadow: 0 0 15px var(--magenta);
 }
 
 .action-btn:active {
@@ -1317,9 +1356,9 @@ body {
 .footer-text {
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
-    color: var(--pink-neon);
+    color: var(--magenta);
     margin-bottom: 15px;
-    text-shadow: 0 0 10px var(--pink-neon);
+    text-shadow: 0 0 10px var(--magenta);
 }
 
 .footer-subtext {

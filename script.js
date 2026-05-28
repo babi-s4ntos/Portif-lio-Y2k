@@ -460,8 +460,8 @@ document.addEventListener('click', (e) => {
     const star = document.createElement('div');
     star.className = 'click-star';
     
-    // Randomly choose pink or purple star
-    const colors = ['var(--pink-neon)', 'var(--purple-digital)'];
+    // Randomly choose magenta or black star
+    const colors = ['var(--magenta)', 'var(--black)'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
     star.innerHTML = '✦';
