@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ My Digital Universe ✨ - Y2K Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-text">CONNECTING TO INTERNET...</div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <div class="loading-status" id="loadingStatus">Dialing...</div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="background-grid"></div>
+    <div class="floating-elements">
+        <div class="float-item folder">📁</div>
+        <div class="float-item cd">💿</div>
+        <div class="float-item window">🪟</div>
+        <div class="float-item star">⭐</div>
+        <div class="float-item disk">💾</div>
+    </div>
+
+    <!-- Y2K Navbar -->
+    <nav class="y2k-navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="img/logo.png" alt="Logo" class="logo-image">
+            </div>
+            <div class="navbar-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#paint" class="nav-link">Paint</a>
+            </div>
+            <button class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-image-container">
+                <img src="img/imgBanner.png" alt="Banner" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">BAB's</span>
+                    <span class="title-line chrome">UNIVERSE</span>
+                </h1>
+                <p class="hero-subtitle">Welcome to my digital universe ✨</p>
+                <div class="hero-decoration">
+                    <span class="sparkle">✦</span>
+                    <span class="sparkle">✧</span>
+                    <span class="sparkle">✦</span>
+                </div>
+                <a href="#about" class="cta-button">
+                    <span class="button-text">ENTER MY WORLD</span>
+                    <span class="button-glow"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="window-xp">
+                <div class="window-titlebar">
+                    <span class="window-title">About Me - Notepad</span>
+                    <div class="window-controls">
+                        <span class="control minimize">_</span>
+                        <span class="control maximize">□</span>
+                        <span class="control close">×</span>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="profile-section">
+                        <div class="avatar-frame">
+                            <div class="avatar">👤</div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="profile-name">Creative Developer</h2>
+                            <p class="profile-bio">
+                                Olá! Sou um desenvolvedor apaixonado por criar experiências digitais únicas. 
+                                Combinando código criativo com design nostálgico, transformo ideias em 
+                                realidades digitais memoráveis.
+                            </p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Level:</span>
+                                    <span class="stat-value">99</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">EXP:</span>
+                                    <span class="stat-value">∞</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Class:</span>
+                                    <span class="stat-value">Digital Wizard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h2 class="section-title">
+                <span class="title-icon">📂</span>
+                MINHAS CRIAÇÕES
+                <span class="title-icon">📂</span>
+            </h2>
+            <div class="file-explorer">
+                <div class="explorer-toolbar">
+                    <span class="toolbar-item">File</span>
+                    <span class="toolbar-item">Edit</span>
+                    <span class="toolbar-item">View</span>
+                    <span class="toolbar-item">Favorites</span>
+                    <span class="toolbar-item">Tools</span>
+                    <span class="toolbar-item">Help</span>
+                </div>
+                <div class="explorer-address">
+                    <span class="address-label">Address:</span>
+                    <span class="address-bar">C:\My Documents\Projects\</span>
+                </div>
+                <div class="projects-grid">
+                    <!-- Web Development -->
+                    <div class="project-folder">
+                        <div class="folder-icon">📁</div>
+                        <span class="folder-name">Web Development</span>
+                        <div class="folder-contents">
+                            <div class="project-file">
+                                <div class="file-icon html">🌐</div>
+                                <span class="file-name">portfolio.html</span>
+                            </div>
+                            <div class="project-file">
+                                <div class="file-icon js">⚡</div>
+                                <span class="file-name">app.js</span>
+                            </div>
+                            <div class="project-file">
+                                <div class="file-icon css">🎨</div>
+                                <span class="file-name">styles.css</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UI/UX Design -->
+                    <div class="project-folder">
+                        <div class="folder-icon">📁</div>
+                        <span class="folder-name">UI/UX Design</span>
+                        <div class="folder-contents">
+                            <div class="project-file">
+                                <div class="file-icon design">🎯</div>
+                                <span class="file-name">wireframe.fig</span>
+                            </div>
+                            <div class="project-file">
+                                <div class="file-icon design">🖼️</div>
+                                <span class="file-name">mockup.png</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Graphic Design -->
+                    <div class="project-folder">
+                        <div class="folder-icon">📁</div>
+                        <span class="folder-name">Graphic Design</span>
+                        <div class="folder-contents">
+                            <div class="project-file">
+                                <div class="file-icon image">🖼️</div>
+                                <span class="file-name">banner.psd</span>
+                            </div>
+                            <div class="project-file">
+                                <div class="file-icon image">🎨</div>
+                                <span class="file-name">logo.ai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2 class="section-title">
+                <span class="title-icon">⚡</span>
+                SKILLS
+                <span class="title-icon">⚡</span>
+            </h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">🎨</span>
+                        <span class="skill-name">CSS3</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">⚡</span>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">⚛️</span>
+                        <span class="skill-name">React</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">🎯</span>
+                        <span class="skill-name">UI/UX Design</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-icon">🖼️</span>
+                        <span class="skill-name">Figma</span>
+                        <span class="skill-percent">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <h2 class="section-title">
+                <span class="title-icon">📅</span>
+                TIMELINE
+                <span class="title-icon">📅</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <div class="blog-post">
+                            <div class="post-header">
+                                <span class="post-date">Posted: 01/01/2024</span>
+                                <span class="post-author">By: Me</span>
+                            </div>
+                            <h3 class="post-title">🚀 New Adventures in Digital Creation</h3>
+                            <p class="post-text">
+                                Iniciando novos projetos explorando as fronteiras do design digital e desenvolvimento web. 
+                                Focando em experiências interativas e memoráveis.
+                            </p>
+                            <div class="post-footer">
+                                <span class="post-tag">#webdev</span>
+                                <span class="post-tag">#design</span>
+                                <span class="post-tag">#creative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <div class="blog-post">
+                            <div class="post-header">
+                                <span class="post-date">Posted: 15/06/2022</span>
+                                <span class="post-author">By: Me</span>
+                            </div>
+                            <h3 class="post-title">💡 Level Up: UI/UX Mastery</h3>
+                            <p class="post-text">
+                                Aprofundando conhecimentos em design de interfaces e experiência do usuário. 
+                                Criando projetos que conectam pessoas através do design.
+                            </p>
+                            <div class="post-footer">
+                                <span class="post-tag">#uiux</span>
+                                <span class="post-tag">#learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <div class="blog-post">
+                            <div class="post-header">
+                                <span class="post-date">Posted: 20/03/2020</span>
+                                <span class="post-author">By: Me</span>
+                            </div>
+                            <h3 class="post-title">🎮 Hello World: First Steps</h3>
+                            <p class="post-text">
+                                Início da jornada no mundo do desenvolvimento web. Primeiras linhas de código, 
+                                primeiros projetos, e a descoberta de uma paixão pelo digital.
+                            </p>
+                            <div class="post-footer">
+                                <span class="post-tag">#beginner</span>
+                                <span class="post-tag">#coding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">
+                <span class="title-icon">💬</span>
+                CONTATO
+                <span class="title-icon">💬</span>
+            </h2>
+            <div class="contact-container">
+                <div class="msn-style">
+                    <div class="msn-header">
+                        <span class="msn-status">● Online</span>
+                        <span class="msn-title">Send me a message!</span>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://github.com" target="_blank" class="contact-btn github">
+                            <span class="btn-icon">🐙</span>
+                            <span class="btn-text">GitHub</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="https://behance.net" target="_blank" class="contact-btn behance">
+                            <span class="btn-icon">🎨</span>
+                            <span class="btn-text">Behance</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="contact-btn instagram">
+                            <span class="btn-icon">📸</span>
+                            <span class="btn-text">Instagram</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-btn linkedin">
+                            <span class="btn-icon">💼</span>
+                            <span class="btn-text">LinkedIn</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paint Section -->
+        <section class="paint" id="paint">
+            <h2 class="section-title">
+                <span class="title-icon">🎨</span>
+                PAINT
+                <span class="title-icon">🎨</span>
+            </h2>
+            <div class="paint-container">
+                <div class="paint-window">
+                    <div class="paint-titlebar">
+                        <span class="paint-title">MS Paint - Untitled</span>
+                        <div class="window-controls">
+                            <span class="control minimize">_</span>
+                            <span class="control maximize">□</span>
+                            <span class="control close">✕</span>
+                        </div>
+                    </div>
+                    <div class="paint-toolbar">
+                        <div class="tool-group">
+                            <button class="tool-btn active" data-tool="brush" title="Brush">🖌️</button>
+                            <button class="tool-btn" data-tool="eraser" title="Eraser">🧹</button>
+                            <button class="tool-btn" data-tool="fill" title="Fill">🪣</button>
+                        </div>
+                        <div class="color-group">
+                            <button class="color-btn active" data-color="#000000" style="background: #000000;"></button>
+                            <button class="color-btn" data-color="#FFFFFF" style="background: #FFFFFF;"></button>
+                            <button class="color-btn" data-color="#FF0000" style="background: #FF0000;"></button>
+                            <button class="color-btn" data-color="#00FF00" style="background: #00FF00;"></button>
+                            <button class="color-btn" data-color="#0000FF" style="background: #0000FF;"></button>
+                            <button class="color-btn" data-color="#FFFF00" style="background: #FFFF00;"></button>
+                            <button class="color-btn" data-color="#FF00FF" style="background: #FF00FF;"></button>
+                            <button class="color-btn" data-color="#00FFFF" style="background: #00FFFF;"></button>
+                            <button class="color-btn" data-color="#FFBACE" style="background: #FFBACE;"></button>
+                            <button class="color-btn" data-color="#9B59B6" style="background: #9B59B6;"></button>
+                        </div>
+                        <div class="size-group">
+                            <label class="size-label">Size:</label>
+                            <input type="range" class="size-slider" min="1" max="50" value="5">
+                            <span class="size-value">5px</span>
+                        </div>
+                        <div class="action-group">
+                            <button class="action-btn clear-btn" title="Clear">🗑️ Clear</button>
+                            <button class="action-btn save-btn" title="Save">💾 Save</button>
+                        </div>
+                    </div>
+                    <div class="paint-canvas-container">
+                        <canvas id="paintCanvas" class="paint-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    ✨ Made with 💖 in the Digital Age ✨
+                </p>
+                <p class="footer-subtext">
+                    © 2024 | Best viewed in 800x600 | Internet Explorer 6.0 recommended
+                </p>
+                <div class="footer-badges">
+                    <span class="badge">Netscape Navigator</span>
+                    <span class="badge">IE 6.0</span>
+                    <span class="badge">Flash Player</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
