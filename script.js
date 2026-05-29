@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingStatus = document.getElementById('loadingStatus');
     
     const loadingSteps = [
-        'Dialing...',
-        'Connecting...',
-        'Authenticating...',
-        'Loading resources...',
-        'Almost there...',
-        'Welcome!'
+        'Discando...',
+        'Conectando...',
+        'Autenticando...',
+        'Carregando recursos...',
+        'Quase lá...',
+        'Bem-vindo!'
     ];
     
     let progress = 0;
